@@ -1,0 +1,166 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Mohamad Mohebifar <mohamad@mohebifar.com>, 2015.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-04-02 08:29+0000\n"
+"Last-Translator: Mohamad Mohebifar <mohamad@mohebifar.com>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: commerce/models.py:7 commerce/models.py:21 commerce/models.py:30
+#: commerce/models.py:40
+msgid "Name"
+msgstr "نام"
+
+#: commerce/models.py:13
+msgid "Field Type"
+msgstr "نوع فیلد"
+
+#: commerce/models.py:16 commerce/models.py:67
+msgid "Product Property"
+msgstr "ویژگی کالا"
+
+#: commerce/models.py:17
+msgid "Product Properties"
+msgstr "ویژگی‌های کالا"
+
+#: commerce/models.py:22
+msgid "Properties"
+msgstr "ویژگی‌های کالا"
+
+#: commerce/models.py:25
+msgid "Product Structure"
+msgstr "ساختار توصیف کالا"
+
+#: commerce/models.py:26 commerce/models.py:32
+msgid "Product Structures"
+msgstr "ساختارهای توصیف کالا"
+
+#: commerce/models.py:31
+msgid "Image"
+msgstr "تصویر"
+
+#: commerce/models.py:35
+msgid "Product Category"
+msgstr "دسته‌بندی کالا"
+
+#: commerce/models.py:36
+msgid "Product Categories"
+msgstr "دسته‌بندی‌های کالا"
+
+#: commerce/models.py:41
+msgid "Long Name"
+msgstr "نام طولانی"
+
+#: commerce/models.py:42 commerce/models.py:57
+msgid "Date"
+msgstr "تاریخ"
+
+#: commerce/models.py:43
+msgid "Category"
+msgstr "شاخه"
+
+#: commerce/models.py:44 commerce/models.py:62
+msgid "Price"
+msgstr "قیمت"
+
+#: commerce/models.py:45
+msgid "Product Main Image"
+msgstr "تصویر اصلی کالا"
+
+#: commerce/models.py:46
+msgid "Images"
+msgstr "تصاویر"
+
+#: commerce/models.py:52 commerce/models.py:69
+msgid "Product"
+msgstr "کالا"
+
+#: commerce/models.py:53 templates/admin/base.html:5
+msgid "Products"
+msgstr "کالاها"
+
+#: commerce/models.py:63
+msgid "Prices"
+msgstr "قیمت‌ها"
+
+#: commerce/models.py:68
+msgid "Value"
+msgstr "مقدار"
+
+#: commerce/models.py:72
+msgid "Product Detail"
+msgstr "مشخصات کالا"
+
+#: commerce/models.py:73
+msgid "Product Details"
+msgstr "مشخصات کالاها"
+
+#: templates/admin/base.html:96
+msgid "Shop Management"
+msgstr "مدیریت فروشگاه"
+
+#: templates/admin/base.html:108
+msgid "Change password"
+msgstr "تغییر رمز"
+
+#: templates/admin/base.html:111
+msgid "Log out"
+msgstr "خروج"
+
+#: templates/admin/base.html:119
+msgid "Documentation"
+msgstr "راهنما"
+
+#: templates/admin/base.html:137
+msgid "Home"
+msgstr "خانه"
+
+
+msgid "Login"
+msgstr "ورود"
+
+
+msgid "Site administration"
+msgstr "مدیریت سایت"
+
+
+msgid "Commerce"
+msgstr "فروشگاه"
+
+
+msgid "Parent Category"
+msgstr "شاخه پدر"
+
+
+msgid "Description"
+msgstr "توضیحات"
+
+
+msgid "Add by url..."
+msgstr "از روی آدرس اینترنتی..."
+
+
+msgid "Library"
+msgstr "آرشیو"
+
+
+msgid "Drop multiple images here to upload"
+msgstr "هر فایلی عکسی که می‌خواهید به هر تعداد اینجا بکشید و رها کنید."
+
+
+msgid "Drop an image here to upload"
+msgstr "یک فایل عکس را اینجا بکشید و رها کنید."
+
+
+msgid "Upload"
+msgstr "آپلود"
