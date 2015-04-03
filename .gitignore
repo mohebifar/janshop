@@ -1,2 +1,5 @@
 static/bower_components
 static/media/*
+db.sqlite3
+commerce/migrations
+.idea
