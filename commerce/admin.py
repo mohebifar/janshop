@@ -1,8 +1,6 @@
 from django.contrib import admin
 from models import *
 from django.utils.translation import ugettext_lazy as _
-from forms import ProductForm
-
 
 admin.site.index_title = _('Site administration')
 admin.site.site_title = _('Site administration')
@@ -39,3 +37,4 @@ admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Structure, StructureAdmin)
 admin.site.register(Property, PropertyAdmin)
+admin.site.register(Brand)

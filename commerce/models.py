@@ -5,12 +5,11 @@ from django.utils.translation import ugettext_lazy as _
 
 class Property(models.Model):
     name = models.CharField(max_length=255, verbose_name=_('Name'))
-    TYPES = (
+    type = models.CharField(choices=(
         ('number', 'Number'),
         ('boolean', 'Boolean'),
         ('text', 'Text'),
-    )
-    type = models.CharField(choices=TYPES, max_length=15, verbose_name=_('Field Type'))
+    ), max_length=15, verbose_name=_('Field Type'))
 
     def __unicode__(self):
         return self.name
@@ -34,7 +33,7 @@ class Structure(models.Model):
 
 class Category(models.Model):
     name = models.CharField(max_length=255, verbose_name=_('Name'))
-    image = models.FileField(null=True, verbose_name=_('Image'), upload_to='static/media/')
+    image = models.FileField(null=True, verbose_name=_('Image'), upload_to='category/')
     structures = models.ManyToManyField(Structure, verbose_name=_('Product Structures'))
     parent = models.ForeignKey("self", blank=True, null=True, verbose_name=_('Parent Category'))
 
@@ -46,13 +45,27 @@ class Category(models.Model):
         verbose_name_plural = _('Product Categories')
 
 
+class Brand(models.Model):
+    name = models.CharField(max_length=255, verbose_name=_('Name'))
+    logo = models.FileField(null=True, verbose_name=_('Image'), upload_to='category/')
+    category = models.ManyToManyField(Category, verbose_name=_('Categories related this brand'))
+
+    def __unicode__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = _('Brand')
+        verbose_name_plural = _('Brands')
+
+
 class Product(models.Model):
     name = models.CharField(max_length=255, verbose_name=_('Name'))
-    long_name = models.CharField(max_length=255, verbose_name=_('Long Name'), blank=True)
+    long_name = models.CharField(max_length=255, verbose_name=_('Long Name'))
     description = models.TextField(null=True, verbose_name=_('Description'))
     category = models.ForeignKey(Category, verbose_name=_('Category'), null=True)
+    brand = models.ForeignKey(Brand, verbose_name=_('Brand'))
     price = models.FloatField(default=0, verbose_name=_('Price'))
-    image = models.ImageField(null=True, upload_to='static/media', verbose_name=_('Product Main Image'))
+    image = models.ImageField(null=True, upload_to='product/', verbose_name=_('Product Main Image'))
     images = files_widget.ImagesField(null=True)
     created_at = models.DateTimeField(auto_now_add=True, blank=True, verbose_name=_('Date'))
 

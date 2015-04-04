@@ -164,3 +164,15 @@ msgstr "یک فایل عکس را اینجا بکشید و رها کنید."
 
 msgid "Upload"
 msgstr "آپلود"
+
+
+msgid "Brand"
+msgstr "برند"
+
+
+msgid "Brands"
+msgstr "برندها"
+
+
+msgid "Categories related this brand"
+msgstr "شاخه‌هایی که این برند در آن‌ها فعالیت دارد"
