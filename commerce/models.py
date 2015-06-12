@@ -68,6 +68,7 @@ class Product(models.Model):
     image = models.ImageField(null=True, upload_to='product/', verbose_name=_('Product Main Image'))
     images = files_widget.ImagesField(null=True)
     created_at = models.DateTimeField(auto_now_add=True, blank=True, verbose_name=_('Date'))
+    available = models.BooleanField(default=True, verbose_name=_('Is Available'))
 
     def __unicode__(self):
         return self.name
@@ -90,7 +91,7 @@ class Prices(models.Model):
 class Detail(models.Model):
     property = models.ForeignKey(Property, verbose_name=_('Product Property'))
     value = models.CharField(max_length=255, verbose_name=_('Value'))
-    product = models.ForeignKey(Product, verbose_name=_('Product'))
+    product = models.ForeignKey(Product, verbose_name=_('Product'), related_name='details')
 
     class Meta:
         verbose_name = _('Product Detail')
