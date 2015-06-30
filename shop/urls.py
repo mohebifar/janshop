@@ -22,7 +22,3 @@ urlpatterns = patterns(
     url(r'^product', 'commerce.views.get_index', name='index'),
 
 )
-
-urlpatterns += patterns('',
-    (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': BASE_DIR + '/static'}),
-)
