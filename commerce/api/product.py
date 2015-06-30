@@ -26,7 +26,6 @@ class ProductDetailSerializer(serializers.ModelSerializer):
     images = serializers.SerializerMethodField()
     category = CategorySerializer()
     details = DetailSerializer(many=True, read_only=True)
-    related = serializers.ListField()
 
     def get_images(self, obj): return get_images(obj)
 
@@ -51,9 +50,6 @@ class ProductSearchList(generics.ListAPIView):
         if query is not None:
             queryset = queryset.filter(Q(name__icontains=query) | Q(long_name__icontains=query))
 
-        if random is not None:
-            queryset = queryset.order_by('?')[:4]
-
         if category is not None:
             queryset = queryset.filter(category=category)
 
@@ -62,6 +58,9 @@ class ProductSearchList(generics.ListAPIView):
 
         if price is not None:
             queryset = queryset.filter(price__lte=price)
+
+        if random is not None:
+            queryset = queryset.order_by('?')[:4]
 
         return queryset
 

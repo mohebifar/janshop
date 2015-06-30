@@ -14,10 +14,11 @@ urlpatterns = patterns(
     url(r'^admin/files-widget/', include('topnotchdev.files_widget.urls')),
     url(r'^admin/grappelli/', include('grappelli.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^api/products/', ProductSearchList.as_view(), name='product-search'),
     url(r'^api/products/(?P<id>\d+)$', ProductDetail.as_view(), name='product-detail'),
-    url(r'^', 'commerce.views.get_index', name='index'),
-    url(r'^', 'commerce.views.get_index', name='index'),
+    url(r'^api/products/', ProductSearchList.as_view(), name='product-search'),
+    url(r'^$', 'commerce.views.get_index', name='index'),
+    url(r'^/$', 'commerce.views.get_index', name='index'),
+    url(r'^product', 'commerce.views.get_index', name='index'),
 
 )
 
