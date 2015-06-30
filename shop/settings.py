@@ -133,3 +133,5 @@ REST_FRAMEWORK = {
         'rest_framework.parsers.JSONParser',
     )
 }
+
+GRAPPELLI_ADMIN_TITLE = 'Shop Administration'
