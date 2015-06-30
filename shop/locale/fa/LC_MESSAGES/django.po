@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-02 08:29+0000\n"
+"POT-Creation-Date: 2015-06-12 08:06+0000\n"
 "Last-Translator: Mohamad Mohebifar <mohamad@mohebifar.com>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
@@ -16,163 +16,196 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: commerce/models.py:7 commerce/models.py:21 commerce/models.py:30
-#: commerce/models.py:40
-msgid "Name"
-msgstr "نام"
-
-#: commerce/models.py:13
-msgid "Field Type"
-msgstr "نوع فیلد"
-
-#: commerce/models.py:16 commerce/models.py:67
-msgid "Product Property"
-msgstr "ویژگی کالا"
-
-#: commerce/models.py:17
-msgid "Product Properties"
-msgstr "ویژگی‌های کالا"
-
-#: commerce/models.py:22
-msgid "Properties"
-msgstr "ویژگی‌های کالا"
-
-#: commerce/models.py:25
-msgid "Product Structure"
-msgstr "ساختار توصیف کالا"
-
-#: commerce/models.py:26 commerce/models.py:32
-msgid "Product Structures"
-msgstr "ساختارهای توصیف کالا"
-
-#: commerce/models.py:31
-msgid "Image"
-msgstr "تصویر"
-
-#: commerce/models.py:35
-msgid "Product Category"
-msgstr "دسته‌بندی کالا"
-
-#: commerce/models.py:36
-msgid "Product Categories"
-msgstr "دسته‌بندی‌های کالا"
-
-#: commerce/models.py:41
-msgid "Long Name"
-msgstr "نام طولانی"
-
-#: commerce/models.py:42 commerce/models.py:57
-msgid "Date"
-msgstr "تاریخ"
-
-#: commerce/models.py:43
-msgid "Category"
-msgstr "شاخه"
-
-#: commerce/models.py:44 commerce/models.py:62
-msgid "Price"
-msgstr "قیمت"
-
-#: commerce/models.py:45
-msgid "Product Main Image"
-msgstr "تصویر اصلی کالا"
-
-#: commerce/models.py:46
-msgid "Images"
-msgstr "تصاویر"
-
-#: commerce/models.py:52 commerce/models.py:69
-msgid "Product"
-msgstr "کالا"
-
-#: commerce/models.py:53 templates/admin/base.html:5
-msgid "Products"
-msgstr "کالاها"
-
-#: commerce/models.py:63
-msgid "Prices"
-msgstr "قیمت‌ها"
-
-#: commerce/models.py:68
-msgid "Value"
-msgstr "مقدار"
-
-#: commerce/models.py:72
-msgid "Product Detail"
-msgstr "مشخصات کالا"
-
-#: commerce/models.py:73
-msgid "Product Details"
-msgstr "مشخصات کالاها"
-
-#: templates/admin/base.html:96
-msgid "Shop Management"
-msgstr "مدیریت فروشگاه"
-
-#: templates/admin/base.html:108
-msgid "Change password"
-msgstr "تغییر رمز"
-
-#: templates/admin/base.html:111
-msgid "Log out"
-msgstr "خروج"
-
-#: templates/admin/base.html:119
-msgid "Documentation"
-msgstr "راهنما"
-
-#: templates/admin/base.html:137
-msgid "Home"
-msgstr "خانه"
-
-
-msgid "Login"
-msgstr "ورود"
-
-
+#: commerce/admin.py:5 commerce/admin.py:6
 msgid "Site administration"
 msgstr "مدیریت سایت"
 
-
+#: commerce/admin.py:7
 msgid "Commerce"
 msgstr "فروشگاه"
 
+#: commerce/models.py:7 commerce/models.py:23 commerce/models.py:35
+#: commerce/models.py:49 commerce/models.py:62
+msgid "Name"
+msgstr "نام"
 
+#: commerce/models.py:12
+msgid "Field Type"
+msgstr "نوع فیلد"
+
+#: commerce/models.py:18 commerce/models.py:92
+msgid "Product Property"
+msgstr "ویژگی کالا"
+
+#: commerce/models.py:19
+msgid "Product Properties"
+msgstr "ویژگی‌های کالا"
+
+#: commerce/models.py:24
+msgid "Properties"
+msgstr "ویژگی‌های کالا"
+
+#: commerce/models.py:30
+msgid "Product Structure"
+msgstr "ساختار توصیف کالا"
+
+#: commerce/models.py:31 commerce/models.py:37
+msgid "Product Structures"
+msgstr "ساختارهای توصیف کالا"
+
+#: commerce/models.py:36 commerce/models.py:50
+msgid "Image"
+msgstr "تصویر"
+
+#: commerce/models.py:38
 msgid "Parent Category"
 msgstr "شاخه پدر"
 
+#: commerce/models.py:44
+msgid "Product Category"
+msgstr "دسته‌بندی کالا"
 
-msgid "Description"
-msgstr "توضیحات"
+#: commerce/models.py:45
+msgid "Product Categories"
+msgstr "دسته‌بندی‌های کالا"
 
+#: commerce/models.py:51
+msgid "Categories related this brand"
+msgstr "شاخه‌هایی که این برند در آن‌ها فعالیت دارد"
 
-msgid "Add by url..."
-msgstr "از روی آدرس اینترنتی..."
-
-
-msgid "Library"
-msgstr "آرشیو"
-
-
-msgid "Drop multiple images here to upload"
-msgstr "هر فایلی عکسی که می‌خواهید به هر تعداد اینجا بکشید و رها کنید."
-
-
-msgid "Drop an image here to upload"
-msgstr "یک فایل عکس را اینجا بکشید و رها کنید."
-
-
-msgid "Upload"
-msgstr "آپلود"
-
-
+#: commerce/models.py:57 commerce/models.py:66
 msgid "Brand"
 msgstr "برند"
 
-
+#: commerce/models.py:58
 msgid "Brands"
 msgstr "برندها"
 
+#: commerce/models.py:63
+msgid "Long Name"
+msgstr "نام طولانی"
 
-msgid "Categories related this brand"
-msgstr "شاخه‌هایی که این برند در آن‌ها فعالیت دارد"
+#: commerce/models.py:64
+msgid "Description"
+msgstr "توضیحات"
+
+#: commerce/models.py:65
+msgid "Category"
+msgstr "شاخه"
+
+#: commerce/models.py:67 commerce/models.py:87
+msgid "Price"
+msgstr "قیمت"
+
+#: commerce/models.py:68
+msgid "Product Main Image"
+msgstr "تصویر اصلی کالا"
+
+#: commerce/models.py:70 commerce/models.py:82
+msgid "Date"
+msgstr "تاریخ"
+
+#: commerce/models.py:71
+msgid "Is Available"
+msgstr "موجود است"
+
+#: commerce/models.py:77 commerce/models.py:94
+msgid "Product"
+msgstr "کالا"
+
+#: commerce/models.py:78
+msgid "Products"
+msgstr "کالاها"
+
+#: commerce/models.py:88
+msgid "Prices"
+msgstr "قیمت‌ها"
+
+#: commerce/models.py:93
+msgid "Value"
+msgstr "مقدار"
+
+#: commerce/models.py:97
+msgid "Product Detail"
+msgstr "مشخصات کالا"
+
+#: commerce/models.py:98
+msgid "Product Details"
+msgstr "مشخصات کالاها"
+
+#: shop/templates/admin/base.html:119
+msgid "Change password"
+msgstr "تغییر رمز"
+
+#: shop/templates/admin/base.html:124
+msgid "Log out"
+msgstr "خروج"
+
+#: shop/templates/admin/base.html:132
+msgid "Documentation"
+msgstr "راهنما"
+
+#: shop/templates/admin/base.html:150
+msgid "Home"
+msgstr "خانه"
+
+#: shop/templates/admin/login.html:26
+msgid "Login"
+msgstr "ورود"
+
+#: shop/templates/admin/login.html:32 shop/templates/admin/product/add.html:27
+msgid "Please correct the error below."
+msgstr ""
+
+#: shop/templates/admin/login.html:32 shop/templates/admin/product/add.html:27
+msgid "Please correct the errors below."
+msgstr ""
+
+#: shop/templates/admin/login.html:54
+msgid "Password:"
+msgstr ""
+
+#: shop/templates/admin/login.html:63
+msgid "Forgotten your password or username?"
+msgstr ""
+
+#: shop/templates/admin/login.html:70
+#, fuzzy
+#| msgid "Log out"
+msgid "Log in"
+msgstr "خروج"
+
+#: shop/templates/files_widget/files_widget.html:3
+msgid "undo"
+msgstr ""
+
+#: shop/templates/files_widget/files_widget.html:6
+msgid "Drop multiple images here to upload"
+msgstr "هر فایلی عکسی که می‌خواهید به هر تعداد اینجا بکشید و رها کنید."
+
+#: shop/templates/files_widget/files_widget.html:8
+msgid "Drop an image here to upload"
+msgstr "یک فایل عکس را اینجا بکشید و رها کنید."
+
+#: shop/templates/files_widget/files_widget.html:32
+msgid "Upload"
+msgstr "آپلود"
+
+#: shop/templates/files_widget/files_widget.html:36
+msgid "Library"
+msgstr "آرشیو"
+
+#: shop/templates/files_widget/files_widget.html:39
+#: shop/templates/files_widget/files_widget.html:41
+msgid "Add by url..."
+msgstr "از روی آدرس اینترنتی..."
+
+#: shop/templates/files_widget/files_widget.html:58
+msgid "Images to be removed"
+msgstr ""
+
+msgid "Images"
+msgstr "تصاویر"
+
+msgid "Shop Management"
+msgstr "مدیریت فروشگاه"
