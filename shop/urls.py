@@ -4,6 +4,7 @@ from commerce.views import *
 from commerce.api.product import *
 from commerce.api.category import *
 from commerce.api.brand import *
+from settings import BASE_DIR
 
 admin.autodiscover()
 
@@ -22,3 +23,6 @@ urlpatterns = patterns(
 
 )
 
+urlpatterns += patterns('',
+    (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': BASE_DIR + '/static'}),
+)
