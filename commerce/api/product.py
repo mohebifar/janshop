@@ -4,10 +4,7 @@ from django.db.models import Q
 
 from category import CategorySerializer
 from detail import DetailSerializer
-
-from commerce.views import router
 from commerce.models import Product
-from commerce.models import Detail
 
 
 def images_prefix(image): return '/static/media/' + image
@@ -31,28 +28,40 @@ class ProductDetailSerializer(serializers.ModelSerializer):
     details = DetailSerializer(many=True, read_only=True)
     related = serializers.ListField()
 
+    def get_images(self, obj): return get_images(obj)
+
     class Meta:
         model = Product
-        fields = ('name', 'image', 'long_name', 'price', 'images', 'category', 'details', 'description')
-
-    def get_images(self, obj): return get_images(obj)
+        fields = ('name', 'image', 'long_name', 'price', 'images', 'category', 'details', 'description', 'available')
 
 
 class ProductSearchList(generics.ListAPIView):
     serializer_class = ProductSerializer
     model = serializer_class.Meta.model
-    paginate_by = 10
+    paginate_by = 16
 
     def get_queryset(self):
         query = self.request.query_params.get('query', None)
         category = self.request.query_params.get('category', None)
+        random = self.request.query_params.get('random', None)
+        price = self.request.data.get('price', None)
+        brand = self.request.data.get('brand', None)
         queryset = Product.objects.all()
 
         if query is not None:
             queryset = queryset.filter(Q(name__icontains=query) | Q(long_name__icontains=query))
 
+        if random is not None:
+            queryset = queryset.order_by('?')[:4]
+
         if category is not None:
-            queryset = queryset.filter(category=category).order_by('?')[:4]
+            queryset = queryset.filter(category=category)
+
+        if brand is not None:
+            queryset = queryset.filter(brand=brand)
+
+        if price is not None:
+            queryset = queryset.filter(price__lte=price)
 
         return queryset
 
@@ -67,6 +76,3 @@ class ProductDetail(generics.RetrieveAPIView):
     model = Product
     serializer_class = ProductDetailSerializer
     lookup_field = 'id'
-
-
-router.register(r'products', ProductViewSet)
