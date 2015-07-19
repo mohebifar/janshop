@@ -11,6 +11,10 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = ('name', 'parent',)
 
 
+class SliderAdmin(admin.ModelAdmin):
+    list_display = ('title', 'description',)
+
+
 class PropertyAdmin(admin.ModelAdmin):
     list_display = ('name', 'type',)
 
@@ -37,4 +41,5 @@ admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Structure, StructureAdmin)
 admin.site.register(Property, PropertyAdmin)
+admin.site.register(Slider, SliderAdmin)
 admin.site.register(Brand)

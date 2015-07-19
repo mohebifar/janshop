@@ -96,3 +96,17 @@ class Detail(models.Model):
     class Meta:
         verbose_name = _('Product Detail')
         verbose_name_plural = _('Product Details')
+
+
+class Slider(models.Model):
+    image = models.ImageField(null=True, upload_to='product/', verbose_name=_('Picture'))
+    title = models.CharField(max_length=255, verbose_name=_('Title'))
+    description = models.CharField(max_length=255, verbose_name=_('Description'))
+    show = models.BooleanField(default=True, verbose_name=_('Show'))
+
+    def __unicode__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = _('Slider Picture')
+        verbose_name_plural = _('Slider Pictures')

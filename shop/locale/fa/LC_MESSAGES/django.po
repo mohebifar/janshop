@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-12 08:06+0000\n"
+"POT-Creation-Date: 2015-07-19 15:31+0000\n"
 "Last-Translator: Mohamad Mohebifar <mohamad@mohebifar.com>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
@@ -85,7 +85,7 @@ msgstr "برندها"
 msgid "Long Name"
 msgstr "نام طولانی"
 
-#: commerce/models.py:64
+#: commerce/models.py:64 commerce/models.py:104
 msgid "Description"
 msgstr "توضیحات"
 
@@ -133,6 +133,26 @@ msgstr "مشخصات کالا"
 msgid "Product Details"
 msgstr "مشخصات کالاها"
 
+#: commerce/models.py:102
+msgid "Picture"
+msgstr "تصویر"
+
+#: commerce/models.py:103
+msgid "Title"
+msgstr "عنوان"
+
+#: commerce/models.py:105
+msgid "Show"
+msgstr "نمایش داده شود؟"
+
+#: commerce/models.py:108
+msgid "Slider Picture"
+msgstr "عکس اسلایدر"
+
+#: commerce/models.py:109
+msgid "Slider Pictures"
+msgstr "تصاویر اسلایدر"
+
 #: shop/templates/admin/base.html:119
 msgid "Change password"
 msgstr "تغییر رمز"
@@ -155,19 +175,19 @@ msgstr "ورود"
 
 #: shop/templates/admin/login.html:32 shop/templates/admin/product/add.html:27
 msgid "Please correct the error below."
-msgstr ""
+msgstr "لطفا خطای زیر را درست کنید."
 
 #: shop/templates/admin/login.html:32 shop/templates/admin/product/add.html:27
 msgid "Please correct the errors below."
-msgstr ""
+msgstr "لطفا خطاهای زیر را درست کنید."
 
 #: shop/templates/admin/login.html:54
 msgid "Password:"
-msgstr ""
+msgstr "رمز"
 
 #: shop/templates/admin/login.html:63
 msgid "Forgotten your password or username?"
-msgstr ""
+msgstr "رمز یا نام کاربری خود را فراموش کرده‌اید؟"
 
 #: shop/templates/admin/login.html:70
 #, fuzzy
@@ -202,7 +222,7 @@ msgstr "از روی آدرس اینترنتی..."
 
 #: shop/templates/files_widget/files_widget.html:58
 msgid "Images to be removed"
-msgstr ""
+msgstr "تصاویری که حذف شوند"
 
 msgid "Images"
 msgstr "تصاویر"

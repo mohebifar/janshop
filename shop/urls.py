@@ -4,6 +4,7 @@ from commerce.views import *
 from commerce.api.product import *
 from commerce.api.category import *
 from commerce.api.brand import *
+from commerce.api.slider import *
 from settings import BASE_DIR
 
 admin.autodiscover()
