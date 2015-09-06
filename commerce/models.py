@@ -35,7 +35,8 @@ class Category(models.Model):
     name = models.CharField(max_length=255, verbose_name=_('Name'))
     image = models.FileField(null=True, verbose_name=_('Image'), upload_to='category/')
     structures = models.ManyToManyField(Structure, verbose_name=_('Product Structures'))
-    parent = models.ForeignKey("self", blank=True, null=True, verbose_name=_('Parent Category'))
+    parent = models.ForeignKey("self", blank=True, null=True, verbose_name=_('Parent Category'),
+                               related_name='children')
 
     def __unicode__(self):
         return self.name
@@ -48,7 +49,7 @@ class Category(models.Model):
 class Brand(models.Model):
     name = models.CharField(max_length=255, verbose_name=_('Name'))
     logo = models.FileField(null=True, verbose_name=_('Image'), upload_to='category/')
-    category = models.ManyToManyField(Category, verbose_name=_('Categories related this brand'))
+    category = models.ManyToManyField(Category, verbose_name=_('Categories related this brand'), related_name="brands")
 
     def __unicode__(self):
         return self.name

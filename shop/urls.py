@@ -21,5 +21,6 @@ urlpatterns = patterns(
     url(r'^$', 'commerce.views.get_index', name='index'),
     url(r'^/$', 'commerce.views.get_index', name='index'),
     url(r'^product', 'commerce.views.get_index', name='index'),
+    url(r'^search', 'commerce.views.get_index', name='index'),
 
 )
